@@ -1,8 +1,10 @@
 .card{
     position: relative;
+    flex-direction: row;
+    padding: 10px;
     margin: 10px 10px;
-    min-height: 520px;
-    width: 280px;
+    min-height: 300px;
+    max-width: 300px;
     height: 100%;
     border-radius: 4px;
     box-shadow: 0px 0px 4px rgba(0,0,0,0.50);
@@ -10,8 +12,15 @@
     overflow: hidden;  
     transition: all 0.20s ease-in;
     cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
   }
   
+  .card-title {
+    font-size: 16px;
+    color:#300d16;
+
+  }
   .card-img{
     width: 280px;
     height: 260px;
@@ -30,6 +39,13 @@
   
   .card-detail{
     padding: 12px 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+  }
+  h4 {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #300d16;
   }
   
   .card:hover .card-favicon{
@@ -70,3 +86,5 @@
   .offerTag{
     color: #300d16;
   }
+ 
+  

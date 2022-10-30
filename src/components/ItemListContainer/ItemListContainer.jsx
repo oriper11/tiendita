@@ -1,24 +1,17 @@
 import React, { useState, useEffect } from "react";
-import FlexWrapper from "../FlexWrapper/FlexWrapper";
 import ItemList from "./ItemList";
-import getItemsFromAPI from "../productosData/productos";
+import getItemsFromAPI from "../../mockService/mockService";
 
 function ItemListContainer() {
   const [productsList, setProductsList] = useState([]);
 
   useEffect(() => {
-    getItemsFromAPI().then((itemShop) => {
-      setProductsList(itemShop);
+    getItemsFromAPI().then((productos) => {
+      setProductsList(productos);
     });
   }, []);
 
-  return (
-    <div>
-      <FlexWrapper>
-        <ItemList productsList={productsList}/>
-      </FlexWrapper>
-    </div>
-  );
+  return <ItemList productsList={productsList} />;
 }
 
 export default ItemListContainer;
