@@ -8,7 +8,7 @@ function Button(props) {
     );
 
   function handleClick() { 
-    setColorState({ backgroundColor: "red", color: "white" });
+    setColorState({ backgroundColor: "violet", color: "white" });
   }
 
   return (

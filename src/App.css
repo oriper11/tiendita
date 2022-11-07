@@ -2,7 +2,7 @@
 .App {
   text-align: center;
   background-image: url(../public/htmlFondo.jpg);
-  flex:content;
+  flex: content;
   flex-direction: row;
   
 }
@@ -19,3 +19,6 @@
   color: white;
 }
 
+.p-card {
+  overflow: hidden;
+}

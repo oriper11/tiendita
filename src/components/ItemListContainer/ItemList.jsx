@@ -1,6 +1,7 @@
 import React from 'react'
 import FlexWrapper from '../FlexWrapper/Flexwrapper';
 import Item from "../Item/Item";
+import "./itemlistcontainer.css"
 
 function ItemList (props) {
   return (

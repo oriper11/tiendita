@@ -1,0 +1,33 @@
+itemli
+
+h2 {
+    background-color: violet;
+    color:black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    justify-content: center;
+    
+
+}
+h4 {
+    background-color: violet;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    justify-content: center;
+    
+    
+}
+p {
+    color:black;
+    text-shadow: 0 1px violet ;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.card-detail {
+    width: 400px;
+    height: 150px;
+    padding: 10px;
+}

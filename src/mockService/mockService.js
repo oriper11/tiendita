@@ -1,8 +1,7 @@
-export default function getItemsFromAPI () {
     const productos = [
         {
           id: 1,
-          title: "Paño tarot astrológico árbol y zodiaco constelaciones",
+          title: "PAÑO TAROT ASTROLÓGICO ÁRBOL Y ZODIACO CONSTELACIONES",
           price: 1560,
           stock: 54,
           category: "accesorios",
@@ -11,7 +10,7 @@ export default function getItemsFromAPI () {
         },
         {
           id: 2,
-          title: "Kit 3 dados astrológicos Tarot de acrílico con instrucciones",
+          title: "KIT 3 DADOS ASTROLÓGICOS TAROT DE ACRÍLICO CON INSTRUCCIONES",
           description: "Kit de 3 dados astrológicos para tiradas de tarot y/o astrológicas en bolsita de gasa o lienzo. Uno representa los signos, otro representa las casas, y otro los planetas.",
           price: 2500,
           stock: 22,
@@ -20,7 +19,7 @@ export default function getItemsFromAPI () {
         },
         {
           id: 3,
-          title: "Libro Astrologia Del Liderazgo [ilustrado] - Suarez Valente",
+          title: "LIBRO ASTROLOGIA DEL LIDERAZGO - SUAREZ VALENTE",
           description: "",
           price: 3400,
           stock: 133,
@@ -29,7 +28,7 @@ export default function getItemsFromAPI () {
         },
         {
           id: 4,
-          title: "Libro Astro-lógica - F. Brizuela - L. Brizuela - Kier",
+          title: "LIBRO ASTRO-LÓGICA - F. BRIZUELA - L. BRIZUELA - KIER",
           description: "Guía inicial para el estudio de la astrología.",
           price: 6000,
           stock: 22,
@@ -38,17 +37,17 @@ export default function getItemsFromAPI () {
         },
         {
           id: 5,
-          title: "Kit de limpieza astrologico: vela, sales , perfume áurico",
+          title: "KIT DE LIMPIEZA ASTROLÓGICO: VELA, SALES , PERFUME ÁURICO",
           description:
             "Set de productos: vela aromática, sales de baño, shower gel, perfume áurico inspirados en los elementos naturales (fuego, tierra, aire y Aqua) de los signos zodiacales",
           price: 499,
           stock: 32,
-          category: "accesorios",
+          category: "bienestar",
           thumbnail: "https://http2.mlstatic.com/D_NQ_NP_2X_698470-MLA47659084132_092021-F.webp",
         },
         {
           id: 6,
-          title: "Luna Negra ,la - Coutela , Jacques - Carcamo",
+          title: "LUNA NEGRA ,LA - COUTELA , JACQUES - CARCAMO",
           description:
             "Interpretación completa de Lilith",
           price: 4000,
@@ -59,7 +58,7 @@ export default function getItemsFromAPI () {
       
         {
           id: 7,
-          title: "Asuntos Venus + Alumbra La Luna - Lu Gaitán",
+          title: "ASUNTOS VENUS + ALUMBRA LA LUNA - LU GAITÁN",
           description:
             "Un libro que tiene historias de vida reales, analizadas en clave astrológica.",
           price: 8000,
@@ -70,7 +69,7 @@ export default function getItemsFromAPI () {
       
         {
           id: 8,
-          title: "Cuadro Carta Natal/astral Zodiaco 20x30",
+          title: "CUADRO CARTA NATAL/ASTRAL ZODIACO 20X30",
           description:
             "Hermoso cuadro de una carta natal/astral 20x30cm el cual incluye diagrama, más los datos personales (no trae informe).",
           price: 3500,
@@ -80,26 +79,26 @@ export default function getItemsFromAPI () {
         },
         {
           id: 9,
-          title: "Sahumerios Sagrada Madre Lavanda & Olíbano Linea Hierbas",
+          title: "SAHUMERIOS SAGRADA MADRE LAVANDA & OLÍBANO LINEA HIERBAS",
           description: "Desde tiempos muy antiguos la Lavanda y el Incienso (Olíbano) son usados en rituales y ceremonias como protectores, purificadores y neutralizadores de energías.",        
           price:400 ,
           stock: 96,
-          category: "accesorios",
+          category: "bienestar",
           thumbnail: "https://www.tiendafacil.com.ar/tienda/uploads/1000x1000/1582060867_6699fcf8.jpg",
         },
         {
           id: 10,
-          title: "Palo santo - Limpieza de ambientes",
+          title: "PALO SANTO - LIMPIEZA DE AMBIENTES",
           description:
             "El palo santo LIVE THAI es 100% puro, no es mezcla de maderas. De origen peruano es muy concentrado y súper perfumado.",
           price: 600,
           stock: 89,
-          category: "accesorios",
+          category: "bienestar",
           thumbnail: "https://http2.mlstatic.com/D_NQ_NP_2X_994187-MLA31352679697_072019-F.webp",
         },
         {
           id: 11,
-          title: "Las doce casas - Howard Sasportas",
+          title: "LAS DOCE CASAS - HOWARD SASPORTAS",
           description:
             "Astrología general",
           price: 3000,
@@ -109,66 +108,66 @@ export default function getItemsFromAPI () {
         },
         {
           id: 12,
-          title: "ProductosAccesoriosSahumadores.Sahumador Copalera Cerámica Grande Sagrada Madre",
+          title: "SAHUMADOR COPALERA CERÁMICA GRANDE SAGRADA MADRE",
           description: "COPALERAS SAHUMADOR",
           price: 1500,
           stock: 52,
-          category: "accesorios",
+          category: "bienestar",
           thumbnail: "https://www.tiendafacil.com.ar/tienda/uploads/400x400/1625184812_e7ccdd2e.jpg",
         },
         {
           id: 13,
-          title: "Bomba carbón X12 defumador Sagrada Madre. Aromas Limpieza Zen",
+          title: "BOMBA CARBÓN X12 DEFUMADOR SAGRADA MADRE. AROMAS LIMPIEZA ZEN",
           description:
             "Limpieza Energética. Cantidad por caja: 12 carbones. Los Carbones Defumador se utilizan para sahumar con ramas o resinas. Dan una base de calor constante para un correcto sahumado.",
           price: 400,
           stock: 61,
-          category: "accesorios",
+          category: "bienestar",
           thumbnail: "https://http2.mlstatic.com/D_NQ_NP_2X_739433-MLA51775368825_092022-F.webp",
         },
         {
           id: 14,
-          title: "Sahumador Cemento Cuenco Grande",
+          title: "SAHUMADOR CEMENTO CUENCO GRANDE",
           description:
             "El Sahumador Cemento Cuenco Grande es perfecto para sahumar en cualquier espacio. Además es un Porta sahumerio",
           price: 900,
           stock: 50,
-          category: "accesorios",
+          category: "bienestar",
           thumbnail: "https://www.tiendafacil.com.ar/tienda/uploads/600x600/1612227058_05374e76.jpg",
         },
         {
           id: 15,
-          title: "Cascada de Humo Mano con Flor Grande",
+          title: "CASCADA DE HUMO CON FLOR GRANDE",
           description:
             "Fuente Cascada Humo. Modelo: Mano grande.Material: Yeso Negro.Alto: 17.cm",
           price: 800,
           stock: 35,
-          category: "accesorios",
+          category: "bienestar",
           thumbnail: "https://www.tiendafacil.com.ar/tienda/uploads/600x600/1626891195_f9bca0b2.jpg",
         },
         {
           id: 16,
-          title: "Lampara de Sal Cilindrica",
+          title: "LAMPARA DE SAL CILINDRICA",
           description:
             "Modelo Cilindro. Altura 15cm. Ancho 10cm.",
           price: 1900,
           stock: 110,
-          category: "accesorios",
+          category: "bienestar",
           thumbnail: "https://www.tiendafacil.com.ar/tienda/uploads/600x600/1635896572_8b64c3c5.jpg",
         },
         {
           id: 17,
-          title: "Oleum 13A - Concentración Sagrada Madre",
+          title: "OLEUM 13A - CONCENTRACIÓN SAGRADA MADRE",
           description:
             "Flores y Hierbas Aromáticas: Lavanda, Romero, Menta y Vetiver. Aceite esenciales que potencia la concentración",
           price: 1780,
           stock: 78,
-          category: "accesorios",
+          category: "bienestar",
           thumbnail: "https://www.tiendafacil.com.ar/tienda/uploads/600x600/1661296184_11eea9f1.jpg",
         },
         {
           id: 18,
-          title: "Cartas Mazo Tarot Marsella + Guía Básica",
+          title: "CARTAS MAZO TAROT MARSELLA + GUÍA BÁSICA",
           description:
             "Marselles Marsella",
           price: 40,
@@ -178,7 +177,7 @@ export default function getItemsFromAPI () {
         },
         {
           id: 19,
-          title: "Oráculo Magia Simple (edición Tradicional) - Cápsula Dorada",
+          title: "ORÁCULO MAGIA SIMPLE (EDICIÓN TRADICIONAL) - CÁPSULA DORADA",
           description:
             "Mazo de 60 cartas full color con respuestas cortitas y al pie.",
           price: 3500,
@@ -188,7 +187,7 @@ export default function getItemsFromAPI () {
         },
         {
           id: 20,
-          title: "Oráculo Flores Místicas - Cápsula Dorada",
+          title: "ORÁCULO FLORES MÍSTICAS - CÁPSULA DORADA",
           description:
             "Una baraja luminosa y transformadora, inspirada en las esencias de la terapia floral tradicional inglesa.",
           price: 3400,
@@ -196,11 +195,78 @@ export default function getItemsFromAPI () {
           category: "accesorios",
           thumbnail: "https://http2.mlstatic.com/D_NQ_NP_2X_829107-MLA48088237349_112021-F.webp",
         },
+        {
+          id: 21,
+          title: "INTRODUCCIÓN A LA CARTA ASTRAL",
+          description:
+            "La carta astral es un mapa o plano del cielo que representa las posiciones planetarias, en un determinado momento. Este diagrama, puede ser diseñado para una persona (carta natal), un país o un hecho específico, pero siempre los eventos estelares serán observados desde la perspectiva terrestre.La Astrología Occidental tiene un enfoque geocéntrico, es decir, se considera a la Tierra el centro del Universo, con los cuerpos celestes girando a su alrededor (aunque no sea científicamente cierto).En un efecto ilusorio, al observar los fenómenos planetarios desde la óptica terrestre, pareciera que la Tierra fuese el punto central, y que los astros se mueven en torno a ella.",
+          price: 3000,
+          stock: 1,
+          category: "servicios",
+          thumbnail: "https://assets.wemystic.com/wmcom/2018/10/carta-astral-850x640.jpg",
+        },
+        {
+          id: 22,
+          title: "INTRODUCCIÓN A CARTA NUMEROLÓGICA",
+          description:
+            "Cada número es un código que va más allá de cuantificar,  porque nos da la naturaleza o características de las personas, incluso de los animales, los eventos y los lugares. Todos tenemos nombres y apellidos  y una fecha de nacimiento que no se repite igual en otro ser humano, por ello digo que es como tu huella de identidad que es única, los números nos hablan de la personalidad,  del carácter, de tu actitud ante las situaciones, las emociones, los talentos, fortalezas, herencias familiares, los desafíos, las oportunidades e influencias de una persona.",
+          price: 3000,
+          stock: 1,
+          category: "servicios",
+          thumbnail: "https://th.bing.com/th/id/R.e90f0c76547ff90a859d9ee9004bd121?rik=Op66sH7cKJTvKA&riu=http%3a%2f%2fsobrehistoria.com%2fwp-content%2fuploads%2f2014%2f02%2fnumeros-romanos-tallados.jpg&ehk=dn%2bWVJas1JqmhajOm4wcgw4aCqNs%2fmQE1f5TH1p78BA%3d&risl=&pid=ImgRaw&r=0",
+        },
+        {
+          id: 23,
+          title: "CARTA ASTRAL + CARTA NUMEROLÓGICA.",
+          description:
+            "Combinación de ambas técnicas para el descubrimiento de tu identidad.",
+          price: 5200,
+          stock: 1,
+          category: "servicios",
+          thumbnail: "https://1.bp.blogspot.com/-OUd_zl23hzI/UP80ZZobk_I/AAAAAAAAASs/sER207cWPlQ/s1600/tatvasat1+(1).jpg",
+        },
+        {
+          id: 24,
+          title: "CONSULTA AL TAROT + MENSAJE DE ORÁCULO",
+          description:
+            "Se realiza vía asincrónica, una tirada de cartas en base a tres preguntas que necesites resolver al momento. No son de carácter predictivo. Se envía las imágenes de las cartas, el significado en relación con la cuestión presentada. Al finalizar se envía una mensaje del oráculo de los ángeles.",
+          price: 1500,
+          stock: 1,
+          category: "servicios",
+          thumbnail: "https://th.bing.com/th/id/OIP.s78CUBQI32sfhJn8RHFwnQAAAA?pid=ImgDet&rs=1",
+        },
+        
     ];
-    return new Promise ((resolve) => {
-        setTimeout (()=> {
-            resolve(productos);
-        }, 2000);
-    });
 
-}
+    export default function getItemsFromAPI() {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(productos);
+        }, 500);
+      });
+    }
+    
+    export function getSingleItemFromAPI(idParams) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          let itemRequested = productos.find((item) => item.id === Number(idParams));
+    
+          if (itemRequested) {
+            resolve(itemRequested);
+          } else {
+            reject(new Error("El item no existe."));
+          }
+        }, 500);
+      });
+    }
+    
+    export function getItemsFromAPIByCategory(categoryId) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          let itemsRequested = productos.filter(
+            (item) => item.category === categoryId
+          );
+          resolve(itemsRequested);
+        }, 500);
+      });
+    }

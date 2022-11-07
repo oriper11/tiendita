@@ -1,17 +1,17 @@
 import Button from "../Button/Button";
 import CartWidget from "../CartWidget/CartWidget";
 import "./navbar.css";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
     <nav className="nav-menu">
       <h3>ASTROLOGIARTE</h3>
-      <a href="sec1">Nuestra historia</a>
-      <a href="">Servicios</a>
-      <a href="/Item.jsx">Shop</a>
-      <a href="/Contacto.jsx">Contacto</a>
-      <Button><CartWidget /></Button>
-      
+      <Link to="/category/accesorios">Productos</Link>
+      <Link to="/category/servicios">Servicios</Link>
+      <Link to="/category/libros">Libros</Link>      
+      <Link to="/">Contacto</Link>
+      <Link to=""><Button><CartWidget /></Button></Link>
     </nav>
   );
 }
