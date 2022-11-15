@@ -20,17 +20,19 @@ function Item({ product }) {
         ♥
       </button>
       <div className="card-img">
-      <img src={product.thumbnail} alt="" />
+        <img src={product.thumbnail} alt="Product img" />
       </div>
       <div className="card-detail">
         <h2>{product.title}</h2>
         <p>{product.description}</p>
+        {product.discount && (
+          <h4 className="offer">Descuento: {product.discount}%</h4>
+        )}        
         <h4 className="priceTag">$ {product.price}</h4>
       </div>
       <Link to={urlDetail}>
-        <Button>Ver más</Button>
+        <Button>Ver más!</Button>
       </Link>
-      
     </div>
   );
 }

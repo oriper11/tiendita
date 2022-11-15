@@ -3,22 +3,29 @@ import { getSingleItemFromAPI } from "../../mockService/mockService";
 import { useParams } from "react-router-dom";
 import "./itemdetailcontainer.css";
 import ItemDetail from "./ItemDetail";
+import Loader from "../Loader/Loader";
 
 function ItemDetailContainer() {
   const [product, setProduct] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  let params = useParams();
-  let id = params.id;
+  let id = useParams().id;
 
   useEffect(() => {
     getSingleItemFromAPI(id)
       .then((productos) => {
         setProduct(productos);
       })
-      .catch((error) => alert(error));
+      .catch((error) => {
+        console.error(error);
+      })
+      .finally(() => setIsLoading(false));
   }, [id]);
 
-  return <ItemDetail product={product}/>
+  // early return - retorn anticipado
+  if (isLoading) return <Loader color="blue" />;
+
+  return <ItemDetail product={product} />;
 }
 
 export default ItemDetailContainer;

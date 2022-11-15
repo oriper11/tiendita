@@ -2,22 +2,23 @@ import React from 'react'
 import FlexWrapper from '../FlexWrapper/Flexwrapper';
 import Item from "../Item/Item";
 import "./itemlistcontainer.css"
+import Loader from "../Loader/Loader";
 
-function ItemList (props) {
+
+function ItemList(props) {
+  let emptyArray = props.productsList.length === 0;
+
   return (
-    <div>
-<FlexWrapper>
-    {props.productsList.map((product) => (
-      <Item
-        key={product.id}
-        product={product}
-
-      />  
- 
-    ))}
-</FlexWrapper> 
-    </div>    
-  )
+    <FlexWrapper>
+      {emptyArray ? (
+        <Loader color="green" size={128} />
+      ) : (
+        props.productsList.map((product) => (
+          <Item key={product.id} product={product} />
+        ))
+      )}
+    </FlexWrapper>
+  );
 }
 
 export default ItemList;

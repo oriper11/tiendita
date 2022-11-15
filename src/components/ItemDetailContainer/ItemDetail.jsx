@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 function ItemDetail({ product }) {
   const [isInCart, setIsInCart] = useState(false);
@@ -42,9 +44,11 @@ function ItemDetail({ product }) {
         />
       ) : (
         <div>
-          <button>Ir al Carrito</button>
-          <button>Volver al catálogo</button>
-          <button>Quitar del carrito</button>
+                <Link to="/cart">
+                  <button>Ir al Carrito</button>
+                </Link>
+                  <button>Volver al catálogo</button>
+                  <button>Quitar del carrito</button>
         </div>
       )}
     </div>
