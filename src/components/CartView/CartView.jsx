@@ -1,11 +1,35 @@
 import React, { useContext } from "react";
+import { createBuyOrderFirestoreWithStock } from "../../service/firebase";
 import cartContext from "../../storage/CartContext";
 import Button from "../Button/Button";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
+import BuyForm from "./BuyForm";
 
 function CartView() {
   const { cart, clear, removeItem, totalPriceInCart } = useContext(cartContext);
+  const navigate = useNavigate();
 
   if (cart.length === 0) return <h1>Carrito Vacio</h1>;
+
+  function createBuyOrder(userData) {
+    const buyData = {
+      buyer: userData,
+      items: cart,
+      total: totalPriceInCart(),
+      date: new Date(),
+    };
+
+    createBuyOrderFirestoreWithStock(buyData).then((orderId) => {
+      clear();
+      navigate(`/checkout/${orderId}`);
+      Swal.fire({
+        title: `Gracias por tu compra`,
+        text: `El identificador de tu orden es ${orderId}`,
+        icon: "success",
+      });
+    });
+  }
 
   return (
     <div>
@@ -26,6 +50,8 @@ function CartView() {
         Vaciar Carrito
       </Button>
       <h2>Total a pagar: ${totalPriceInCart()}</h2>
+
+      <BuyForm onSubmit={createBuyOrder} />
     </div>
   );
 }

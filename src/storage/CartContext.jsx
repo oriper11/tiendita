@@ -1,9 +1,8 @@
 import { useState, createContext } from "react";
-//1- Inicializamos el context con CreateContext
+
 
 const cartContext = createContext();
 
-// 2. Definimos nuestro Provider
 export function CartContextProvider(props) {
   const [cart, setCart] = useState([]);
 
@@ -22,12 +21,11 @@ export function CartContextProvider(props) {
 
       setCart(newCart);
     } else {
-      
-      setCart((newCart) => {
-        newCart.push(itemData);
-        return newCart;
-      });
+      const newCart = [...cart];
+      newCart.push(itemData);
+      setCart(newCart);
     }
+
   }
 
   function totalItemsInCart() {
@@ -37,16 +35,34 @@ export function CartContextProvider(props) {
     });
     return total;
   }
+
+  function totalPriceInCart() {
+    let totalPrice = 0;
+    cart.forEach((itemInCart) => {
+      totalPrice = totalPrice + itemInCart.count * itemInCart.price;
+    });
+    return totalPrice;
+  }
+
+  function removeItem(itemId) {
+    console.log("Removiendo el item", itemId);
+  }
+
+  function clear() {
+    setCart([]);
+  }
+
   const value = {
     cart,
     addToCart,
     totalItemsInCart,
+    removeItem,
+    totalPriceInCart,
+    clear,
   };
 
- 
 
   return (
-    //4. retornamos el Context Provider con el value creado
     <cartContext.Provider value={value}>{props.children}</cartContext.Provider>
   );
 }

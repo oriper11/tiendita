@@ -1,31 +1,49 @@
 import React, { useState, useEffect } from "react";
-import { getSingleItemFromAPI } from "../../mockService/mockService";
+import { getSingleItemFromAPI } from "../../service/firebase";
+
 import { useParams } from "react-router-dom";
-import "./itemdetailcontainer.css";
 import ItemDetail from "./ItemDetail";
+import "./itemdetailcontainer.css";
+
 import Loader from "../Loader/Loader";
+import FlexWrapper from "../FlexWrapper/Flexwrapper";
 
 function ItemDetailContainer() {
-  const [product, setProduct] = useState([]);
+  const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [feedbackMsg, setFeedbackMsg] = useState(null);
 
   let id = useParams().id;
 
   useEffect(() => {
     getSingleItemFromAPI(id)
-      .then((productos) => {
-        setProduct(productos);
+      .then((itemsDB) => {
+        console.log("then:", itemsDB);
+        setProduct(itemsDB);
       })
       .catch((error) => {
-        console.error(error);
+        setFeedbackMsg(`Error: ${error.message}`);
       })
       .finally(() => setIsLoading(false));
   }, [id]);
 
   // early return - retorn anticipado
-  if (isLoading) return <Loader color="blue" />;
+  if (isLoading)
+    return (
+      <FlexWrapper>
+        <Loader color="blue" size={128} />
+      </FlexWrapper>
+    );
 
-  return <ItemDetail product={product} />;
+  return (
+    <div>
+      {feedbackMsg ? (
+        <span style={{ backgroundColor: "pink" }}>{feedbackMsg}</span>
+      ) : (
+        <ItemDetail product={product} />
+      )}
+    </div>
+  );
 }
 
 export default ItemDetailContainer;

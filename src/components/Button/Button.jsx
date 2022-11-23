@@ -3,7 +3,7 @@ import "./button.css";
 
 function Button(props) {
   const [colorState, setColorState] = useState(
-    { backgroundColor: (props.color), 
+    { backgroundColor: "blueviolet", 
       borderColor: "black" }
     );
 
