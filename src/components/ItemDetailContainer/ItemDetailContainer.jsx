@@ -9,20 +9,18 @@ import Loader from "../Loader/Loader";
 import FlexWrapper from "../FlexWrapper/Flexwrapper";
 
 function ItemDetailContainer() {
-  const [product, setProduct] = useState(null);
+  const [product, setProduct] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [feedbackMsg, setFeedbackMsg] = useState(null);
 
   let id = useParams().id;
 
   useEffect(() => {
     getSingleItemFromAPI(id)
       .then((itemsDB) => {
-        console.log("then:", itemsDB);
         setProduct(itemsDB);
       })
       .catch((error) => {
-        setFeedbackMsg(`Error: ${error.message}`);
+        console.error(error);
       })
       .finally(() => setIsLoading(false));
   }, [id]);
@@ -35,15 +33,7 @@ function ItemDetailContainer() {
       </FlexWrapper>
     );
 
-  return (
-    <div>
-      {feedbackMsg ? (
-        <span style={{ backgroundColor: "pink" }}>{feedbackMsg}</span>
-      ) : (
-        <ItemDetail product={product} />
-      )}
-    </div>
-  );
+  return <ItemDetail product={product} />;
 }
 
 export default ItemDetailContainer;

@@ -1,17 +1,15 @@
 import React, { useState, useContext } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import cartContext from "../../storage/CartContext";
-import { Link } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { Swal } from "sweetalert2";
+
 
 function ItemDetail({ product }) {
   const [isInCart, setIsInCart] = useState(false);
 
-  const { cart, addToCart } = useContext(cartContext);
-
-  let itemInCart = cart.find((item) => product.id === item.id);
-  let stock = product.stock;
-  if (itemInCart) stock -= itemInCart.count;
+  const navigate = useNavigate();
+  const { addToCart } = useContext(cartContext);
 
   function onAddToCart(count) {
     Swal.fire({
@@ -19,12 +17,12 @@ function ItemDetail({ product }) {
       text: "¿Deseas ir al carrito?",
       icon: "success",
       confirmButtonText: "Ir al carrito",
-    }).then((result) => {      
+    }).then((result) => {
       if (result.isConfirmed) {
         navigate("/cart");
       }
     });
-
+    
     const itemForCart = {
       ...product,
       count,
@@ -33,6 +31,7 @@ function ItemDetail({ product }) {
     addToCart(itemForCart);
     setIsInCart(true);
   }
+
 
   return (
     <div className="card-detail">
@@ -48,13 +47,11 @@ function ItemDetail({ product }) {
         <ItemCount
           text="Agregar al carrito"
           onAddToCart={onAddToCart}
-          stock={stock}
+          stock={product.stock}
         />
       ) : (
         <div>
-          <Link to="/cart">
-            <button>Ir al Carrito</button>
-          </Link>
+          <button>Ir al Carrito</button>
           <button>Volver al catálogo</button>
           <button>Quitar del carrito</button>
         </div>
