@@ -3,6 +3,7 @@ import ItemCount from "../ItemCount/ItemCount";
 import cartContext from "../../storage/CartContext";
 import {  useNavigate } from "react-router-dom";
 import { Swal } from "sweetalert2";
+import Button from "../Button/Button";
 
 
 function ItemDetail({ product }) {
@@ -44,16 +45,16 @@ function ItemDetail({ product }) {
         <h4 className="priceTag">$ {product.price}</h4>
       </div>
       {!isInCart ? (
-        <ItemCount
+      <ItemCount
           text="Agregar al carrito"
           onAddToCart={onAddToCart}
           stock={product.stock}
-        />
+          />
       ) : (
         <div>
-          <button>Ir al Carrito</button>
-          <button>Volver al catálogo</button>
-          <button>Quitar del carrito</button>
+        <Button>Ir al Carrito</Button>
+        <Button>Seguir comprando</Button> 
+ 
         </div>
       )}
     </div>

@@ -6,7 +6,7 @@ function ItemCount({ stock, onAddToCart, text }) {
   const [count, setCount] = useState(1);
 
   function handleAdd(evt) {
-    console.log(evt);
+    console.log(evt); 
     if (count < stock) setCount(count + 1);
   }
 
@@ -27,7 +27,7 @@ function ItemCount({ stock, onAddToCart, text }) {
         </Button>
       </div>
       <div className="itemcount_btns">
-        <Button type="alert" onClick={() => onAddToCart(count)}>
+        <Button onClick={( ) => onAddToCart(count)}>
           {text}
         </Button>
       </div>

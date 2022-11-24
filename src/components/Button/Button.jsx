@@ -2,17 +2,13 @@ import { useState } from "react";
 import "./button.css";
 
 function Button(props) {
-  const [colorState, setColorState] = useState(
+  const [colorState] = useState(
     { backgroundColor: "blueviolet", 
       borderColor: "black" }
     );
 
-  function handleClick() { 
-    setColorState({ backgroundColor: "violet", color: "white" });
-  }
-
   return (
-    <button onClick={handleClick} style={colorState} className="btn">
+    <button onClick={props.onClick} style={colorState} className="btn">
       {props.children}
     </button>
   );
