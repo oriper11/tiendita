@@ -2,20 +2,16 @@ import React, { useContext } from "react";
 import cartContext from "../../storage/CartContext";
 
 function CartWidget() {
-  const { totalItemsInCart } = useContext(cartContext);
+  const context = useContext(cartContext);
+  console.log(context)
 
   return (
     <div>
       <div>🛒</div>
-      {totalItemsInCart() > 0 ? (
-        <>
-          <span>{totalItemsInCart()}</span>
-        </>
-      ) : (
-        <></>
-      )}
+      <small>{context.itemsInCart}</small>
     </div>
-  );
+      
+      )
 }
 
 export default CartWidget;
