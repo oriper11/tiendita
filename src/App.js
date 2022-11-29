@@ -14,13 +14,13 @@ function App() {
         <BrowserRouter>
           <NavBar />
           <Routes>
-            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/accesorios" element={<ItemListContainer />} />
             <Route
               path="/category/:categoryid"
               element={<ItemListContainer />}
             />
             <Route path="/detalle/:id" element={<ItemDetailContainer />} />
-            <Route path="/cart" element={<CartView />} />
+            <Route path="/cart" element={<CartView/>} />
             <Route
               path="/checkout/:orderid"
               element={<h1>Gracias por tu compra</h1>}

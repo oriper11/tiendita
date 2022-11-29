@@ -14,6 +14,10 @@ function Item({ product }) {
     isFavorite === true ? "card-favicon favorite" : "card-favicon";
 
     let urlDetail = `/detalle/${product.id}`;
+    let stylePrice ={ 
+      color: product.discount? 'violet' : 'inherit',
+  }
+
     return (
     <div className="card">
       <button onClick={handleFavorite} className={classButtonFavorite}>
@@ -28,7 +32,7 @@ function Item({ product }) {
         {product.discount && (
           <h4 className="offer">Descuento: {product.discount}%</h4>
         )}        
-        <h4 className="priceTag">$ {product.price}</h4>
+        <h4 style={stylePrice} className="priceTag">${product.price}</h4>
       </div>
       <Link to={urlDetail}>
         <Button>Ver más!</Button>

@@ -25,11 +25,10 @@ function ItemDetailContainer() {
       .finally(() => setIsLoading(false));
   }, [id]);
 
-  // early return - retorn anticipado
   if (isLoading)
     return (
       <FlexWrapper>
-        <Loader color="blue" size={128} />
+        <Loader color="blueviolet" size={500} />
       </FlexWrapper>
     );
 

@@ -4,12 +4,13 @@ import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
 import Button from "../Button/Button";
 import cartContext from "../../storage/CartContext";
+import { Link } from "react-router-dom";
 
 
 function ItemDetail({ product }) {
   const [isInCart, setIsInCart] = useState(false);
   const context = useContext(cartContext)
-  const {addToCart, cart} = useContext(cartContext);
+  const {addToCart} = useContext(cartContext);
   const navigate = useNavigate();
 
   function onAddToCart(count) {
@@ -29,7 +30,7 @@ function ItemDetail({ product }) {
       ...product,
       count,
     }
-    addToCart();
+    addToCart(itemForCart);
     setIsInCart(true);
   }
 
@@ -45,17 +46,19 @@ function ItemDetail({ product }) {
         <p>{product.description}</p>
         <h4 className="priceTag">$ {product.price}</h4>
       </div>
-      {isInCart ? (
-        <div> 
-        <Button> Volver al listado </Button>
-        </div>
+      {!isInCart ? (
+           <ItemCount
+           text="Agregar al carrito"
+           onAddToCart={onAddToCart}
+           stock={product.stock}
+         />
           
       ) : (
-        <ItemCount
-          text="Agregar al carrito"
-          onAddToCart={onAddToCart}
-          stock={product.stock}
-          />   
+           <div>
+            <Link to="/cart">
+              <Button> Ir al carrito </Button>
+              </Link>
+          </div>
       )}
     </div>
   );

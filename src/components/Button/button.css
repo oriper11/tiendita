@@ -17,4 +17,9 @@
     box-shadow: 0, 2px, whitesmoke;
     
   }
-  
+  .danger{
+    color: rgb(216, 8, 95);
+  }
+  .alert {
+    color:palevioletred;
+  }

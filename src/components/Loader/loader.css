@@ -1,7 +1,4 @@
-.loader {
-    background-image: url(../public/htmlFondo.jpg);
-    background-size: cover;
-}
+
 .newtons-cradle {
   --uib-size: 40px;
   --uib-speed: 1.4s;
@@ -30,7 +27,6 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-image: url(../public/htmlFondo.jpg);
 }
 
 .newtons-cradle__dot:first-child {
