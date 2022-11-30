@@ -49,24 +49,20 @@ export async function getSingleItemFromAPI(id) {
   }
 }
 
-// async/await -> try/catch
+
 export async function getItemsFromAPI() {
   try {
-    // 1. Necesito conectarme a la colección de "productos" con "collection"
+   
     const collectionProducts = collection(DB, "products");
 
-    // 2. Necesito traer todos los documentos existentes con getDocs
     let respuesta = await getDocs(collectionProducts);
 
-    // 3. Extramos la data de nuestros productos y la mapeamos con "map"
     const products = respuesta.docs.map((docu) => {
       return {
         ...docu.data(),
         id: docu.id,
       };
     });
-
-    // 4. Retornamos el listado de productos mapeado
     return products;
   } catch (error) {
     console.error(error);
