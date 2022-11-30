@@ -5,6 +5,10 @@ import {createBuyOrderFirestore} from "../../service/firebase";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
+
+function CartView () {
+
+
 const {cart, removeItem, totalPriceInCart, clearCart} = useContext(cartContext);
 const navigate = useNavigate();
 
@@ -54,9 +58,10 @@ function createBuyOrder () {
             <h2>Total a pagar: ${totalPriceInCart()}</h2>
           </div>
       ))}
-          </FlexWrapper>
-            
+             </FlexWrapper>
 
-  )
+
+)
+}
 }
 export default CartView;
