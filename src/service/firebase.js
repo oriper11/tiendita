@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+
 import {
   getFirestore,
   collection,
@@ -125,7 +126,7 @@ export async function createBuyOrderFirestoreWithStock(buyOrderData) {
   return docOrderRef.id;
 }
 
-async function exportItemsToFirestore() {
+/*async function exportItemsToFirestore() {
   const items = [
     {
     id: 1,
@@ -370,14 +371,13 @@ async function exportItemsToFirestore() {
     category: "servicios",
     thumbnail: "https://th.bing.com/th/id/OIP.s78CUBQI32sfhJn8RHFwnQAAAA?pid=ImgDet&rs=1",
   },
-];
+];*/
 
 const collectionRef = collection(DB, "products");
 
-for (let item of items) {
+for (let item of item) {
   item.index = item.id;
   delete item.id;
   const docRef = await addDoc(collectionRef, item);
   console.log("Document created with ID", docRef.id);
-}
 }

@@ -12,18 +12,20 @@ function CartView () {
 const {cart, removeItem, totalPriceInCart, clearCart} = useContext(cartContext);
 const navigate = useNavigate();
 
+if (cart.lenght === 0) return <h1>Carrito vacío</h1>
 
-function createBuyOrder () {
-  const buyData = {
+
+function buyData () {
     buyer: { 
-      name: "Oriana Perdomo",
-      phone: "123456789",
-      email: "orianaperdomo@gmail.com"
-    },
-    items: cart,
-    total: totalPriceInCart,
-    date: new Date(),
+      name: "Oriana Perdomo";
+      phone: "123456789";
+      email: "orianaperdomo@gmail.com";
+    }
+    items: cart;
+    total: totalPriceInCart;
+    date: new Date();
   }
+
   createBuyOrderFirestore(buyData).then((orderId) => {
     console.log(orderId);
     clearCart();
@@ -63,5 +65,5 @@ function createBuyOrder () {
 
 )
 }
-}
+
 export default CartView;

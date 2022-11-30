@@ -15,7 +15,7 @@ function ItemListContainer() {
   const { categoryid } = useParams();
 
   useEffect(() => {
-    setIsLoading(true);
+    setIsLoading (true);
     if (categoryid) {
       getItemsFromAPIByCategory(categoryid)
       .then((itemsDB) => {

@@ -42,7 +42,7 @@ export function CartContextProvider(props) {
   }
 
   function removeItem () {
-    
+     console.log ("removiendo item", itemId);
     }
 
   function clearCart () {

@@ -10,8 +10,7 @@ function NavBar() {
       <Link to="/category/accesorios">Productos</Link>
       <Link to="/category/servicios">Servicios</Link>
       <Link to="/category/libros">Libros</Link>      
-      <Link to="/contacto/">Contacto</Link>
-      <Link to=""><Button><CartWidget /></Button></Link>
+      <Link to="/cart"><Button><CartWidget /></Button></Link>
     </nav>
   );
 }
