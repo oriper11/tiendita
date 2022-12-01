@@ -56,6 +56,9 @@ function ItemDetail({ product }) {
             <Link to="/cart">
               <Button> Ir al carrito </Button>
               </Link>
+            <Link to="/">
+              <Button> Seguir comprando </Button>
+            </Link>
           </div>
       )}
     </div>
