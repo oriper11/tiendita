@@ -1,3 +1,4 @@
+import Button from "../Button/Button";
 import CartWidget from "../CartWidget/CartWidget";
 import "./navbar.css";
 import { Link } from "react-router-dom";
@@ -5,11 +6,11 @@ import { Link } from "react-router-dom";
 function NavBar() {
   return (
     <nav className="nav-menu">
-      <h3><Link to="/">ASTROLOGIARTE</Link></h3>
+<h1>astrologiARTE</h1>
       <Link to="/category/accesorios">Productos</Link>
       <Link to="/category/servicios">Servicios</Link>
       <Link to="/category/libros">Libros</Link>      
-      <CartWidget />
+      <Link to="/cart"><Button><CartWidget /></Button></Link>
     </nav>
   );
 }

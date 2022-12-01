@@ -6,7 +6,6 @@ import ItemDetail from "./ItemDetail";
 import "./itemdetailcontainer.css";
 
 import Loader from "../Loader/Loader";
-import FlexWrapper from "../FlexWrapper/Flexwrapper";
 
 function ItemDetailContainer() {
   const [product, setProduct] = useState(null);
@@ -30,9 +29,9 @@ function ItemDetailContainer() {
 
   if (isLoading)
     return (
-      <FlexWrapper>
+     
         <Loader color="blueviolet" size={150} />
-      </FlexWrapper>
+     
     );
 
   return (
