@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import cartContext from "../../storage/CartContext";
 
 function CartWidget() {
@@ -9,12 +9,11 @@ function CartWidget() {
     <div>
       
       {totalItemsInCart() > 0 ? (
-            <><div><Route path="/cart">🛒</Route></div><span> {totalItemsInCart()} </span></>
-      ) : ( 
-        <></>
-      )}
-    </div>
-  );
-}
-
+            <><div><Link to="/cart">🛒</Link></div><span> {totalItemsInCart()} </span></>
+        ) : (
+          <></>
+        )}
+      </div>
+    );
+  }
 export default CartWidget;

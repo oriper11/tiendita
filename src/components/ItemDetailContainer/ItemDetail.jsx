@@ -19,7 +19,6 @@ function ItemDetail({ product }) {
       text: '¿Deseas ir al carrito?',
       icon: 'success',
       confirmButtonText: 'Aceptar',
-      cancelButtonText: 'Cancelar'
 
     }).then((result) => {
       if (result.isConfirmed) {

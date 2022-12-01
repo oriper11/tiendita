@@ -1,5 +1,4 @@
 import { initializeApp } from "firebase/app";
-
 import {
   getFirestore,
   collection,
@@ -14,9 +13,9 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDWogv-ZhExtN7Y7NK7b0QzVZFs3UJUEbI",
+  apiKey: process.env.REACT_APP_KEY_FIREBASE,
   authDomain: "astrologiart.firebaseapp.com",
-  projectId: "astrologiart",
+  projectId: process.env.REACT_APP_PROJECT_ID_FIREBASE,
   storageBucket: "astrologiart.appspot.com",
   messagingSenderId: "192689449732",
   appId: "1:192689449732:web:6fa8cfa63b4d845ca9fe51",
@@ -373,11 +372,3 @@ export async function createBuyOrderFirestoreWithStock(buyOrderData) {
   },
 ];*/
 
-const collectionRef = collection(DB, "products");
-
-for (let item of item) {
-  item.index = item.id;
-  delete item.id;
-  const docRef = await addDoc(collectionRef, item);
-  console.log("Document created with ID", docRef.id);
-}
