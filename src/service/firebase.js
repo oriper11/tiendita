@@ -13,9 +13,9 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_KEY_FIREBASE,
+  apiKey: "AIzaSyDWogv-ZhExtN7Y7NK7b0QzVZFs3UJUEbI",
   authDomain: "astrologiart.firebaseapp.com",
-  projectId: process.env.REACT_APP_PROJECT_ID_FIREBASE,
+  projectId: "astrologiart",
   storageBucket: "astrologiart.appspot.com",
   messagingSenderId: "192689449732",
   appId: "1:192689449732:web:6fa8cfa63b4d845ca9fe51",
@@ -40,11 +40,8 @@ export async function getSingleItemFromAPI(id) {
         ...docSnap.data(),
         id: docSnap.id,
       };
-    } else {
-      throw new Error("El producto no existe");
-    }
-  }
-  catch(error){
+    } 
+  } catch(error){
     throw error;
   }
 }

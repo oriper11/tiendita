@@ -9,26 +9,21 @@ import { Link } from "react-router-dom";
 
 function ItemDetail({ product }) {
   const [isInCart, setIsInCart] = useState(false);
-  const {cart, addToCart, context} = useContext(cartContext)
+  const context = useContext(cartContext)
+  const {addToCart} = useContext(cartContext);
   const navigate = useNavigate();
-
-  let itemInCart = cart.find((item) => product.id === item.id);
-  let stock = product.stock;
-  
-  if (itemInCart) stock -= itemInCart.count;
 
   function onAddToCart(count) {
     Swal.fire({
-      title: `Agregamos ${count} ${product.title} al carrito`,
-      text: '¿Deseas ir al carrito?',
+      title: `Se agregó con exito ${count} ${product.title} al carrito`,
       icon: 'success',
-      confirmButtonText: 'Aceptar',
+      timer: 1000,
 
     }).then((result) => {
       if (result.isConfirmed) {
         navigate('/cart')
-      }
-    });    
+      } 
+    }); 
     const itemForCart = {
       ...product,
       count,
@@ -53,7 +48,7 @@ function ItemDetail({ product }) {
            <ItemCount
            text="Agregar al carrito"
            onAddToCart={onAddToCart}
-           stock={product.stock}
+           stock ={product.stock}
          />
           
       ) : (

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function NavBar() {
   return (
     <nav className="nav-menu">
-<h1>astrologiARTE</h1>
+                  <h1>astrologiarte</h1>
       <Link to="/category/accesorios">Productos</Link>
       <Link to="/category/servicios">Servicios</Link>
       <Link to="/category/libros">Libros</Link>      

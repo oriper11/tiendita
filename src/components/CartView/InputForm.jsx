@@ -5,7 +5,7 @@ export default function BuyForm(props) {
   const [userData, setUserData] = useState({
     name: "",
     email: "",
-    phone: "",
+    phone: "", 
   });
 
   console.log(userData);

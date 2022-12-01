@@ -45,16 +45,12 @@ export function CartContextProvider(props) {
     return totalPrice;
   }
 
-  function removeItem (itemId) {
-     cart.filter(itemId);
-    }
-
   function clearCart () {
     setCart([]);
       }
    
 
-  const value = {cart,addToCart, totalItemsInCart,removeItem,clearCart,totalPriceInCart}
+  const value = {cart,addToCart, totalItemsInCart,clearCart,totalPriceInCart}
   return(
     <cartContext.Provider value={value}>{props.children}</cartContext.Provider>
   )
