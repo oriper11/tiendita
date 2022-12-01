@@ -4,7 +4,6 @@ import ItemList from "../ItemListContainer/ItemList";
 import { getItemsFromAPI, getItemsFromAPIByCategory } from "../../service/firebase";
 
 import { useParams } from "react-router-dom";
-import FlexWrapper from "../FlexWrapper/Flexwrapper";
 import Loader from "../Loader/Loader";
 
 function ItemListContainer() {
@@ -35,9 +34,9 @@ function ItemListContainer() {
 
     if (isLoading)
     return (
-      <FlexWrapper>
+     
         <Loader color="blue" size={128} />
-      </FlexWrapper>
+    
     );
 
   return <ItemList feedbackMsg={feedbackMsg} productsList={productsList} />;
