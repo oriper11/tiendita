@@ -38,7 +38,7 @@ function ItemDetailContainer() {
   return (
     <div>
   { feedbackMsg ? (
-  <span style={{backgroundColor: "pink"}}>{feedbackMsg}</span>
+  <span style={{backgroundColor: "white"}}>{feedbackMsg}</span>
   ) : (
   <ItemDetail product={product}></ItemDetail>
 )}

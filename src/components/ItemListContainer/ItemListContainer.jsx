@@ -14,8 +14,6 @@ function ItemListContainer() {
 
   const { categoryid } = useParams();
 
-
-
   useEffect(() => {
     setIsLoading (true);
     if (categoryid) {
@@ -35,16 +33,14 @@ function ItemListContainer() {
     }
   }, [categoryid]);
 
-  if (isLoading)
-   return (
-     <FlexWrapper>
-       <Loader color="blueviolet" size={150} />
-     </FlexWrapper>
-   );
+    if (isLoading)
+    return (
+      <FlexWrapper>
+        <Loader color="blue" size={128} />
+      </FlexWrapper>
+    );
 
   return <ItemList feedbackMsg={feedbackMsg} productsList={productsList} />;
-
-  
 }
 
 export default ItemListContainer;

@@ -6,15 +6,19 @@ export function CartContextProvider(props) {
   const [cart,setCart] = useState([]);
 
   function addToCart(itemData){
-    let itemFound = cart.find(itemInCart => itemInCart.id === itemData.id)
-    if (itemFound){
-      let newCart = cart.map( itemInCart => {
+    let itemFound = cart.find(itemInCart => itemInCart.id === itemData.id);
+
+    if (itemFound) {
+      let newCart = cart.map((itemInCart) => {
         if (itemInCart.id === itemData.id) {
+          itemInCart.count += itemData.count;
           return itemInCart;
         } else {
           return itemInCart;
         }
-      })
+      });
+
+
       setCart(newCart)
     } else {
       setCart((newCart) => {
@@ -41,8 +45,8 @@ export function CartContextProvider(props) {
     return totalPrice;
   }
 
-  function removeItem () {
-     console.log ("removiendo item", itemId);
+  function removeItem (itemId) {
+     cart.filter(itemId);
     }
 
   function clearCart () {

@@ -7,11 +7,14 @@ function Button(props) {
       borderColor: "black" }
     );
 
-  return (
-    <button onClick={props.onClick} style={colorState} className="btn">
-      {props.children}
-    </button>
-  );
-}
-
+    return (
+      <button
+        onClick={props.onClick}
+        style={colorState}
+        className={`btn ${props.type || ""}`}
+      >
+        {props.children}
+      </button>
+    );
+  }
 export default Button;

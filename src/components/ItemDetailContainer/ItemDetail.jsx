@@ -9,9 +9,13 @@ import { Link } from "react-router-dom";
 
 function ItemDetail({ product }) {
   const [isInCart, setIsInCart] = useState(false);
-  const context = useContext(cartContext)
-  const {addToCart} = useContext(cartContext);
+  const {cart, addToCart, context} = useContext(cartContext)
   const navigate = useNavigate();
+
+  let itemInCart = cart.find((item) => product.id === item.id);
+  let stock = product.stock;
+  
+  if (itemInCart) stock -= itemInCart.count;
 
   function onAddToCart(count) {
     Swal.fire({
