@@ -2,27 +2,13 @@ import React, { useState } from "react";
 import InputForm from "./InputForm";
 
 export default function BuyForm(props) {
-  const [userData, setUserData] = useState({
+  const [userData, ] = useState({
     name: "",
     email: "",
     phone: "",
   });
 
   console.log(userData);
-
-  function onInputChange(evt) {
-    const inputName = evt.target.name;
-    const value = evt.target.value;
-
-    const newUserData = { ...userData };
-    newUserData[inputName] = value;
-    setUserData(newUserData);
-  }
-
-  function onSubmit(evt) {
-    evt.preventDefault();
-    props.onSubmit(userData);
-  }
 
   return (
     <form onSubmit={onSubmit}>

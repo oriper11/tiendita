@@ -8,7 +8,6 @@ export default function BuyForm(props) {
     phone: "", 
   });
 
-  console.log(userData);
 
   function onInputChange(evt) {
     const inputName = evt.target.name;
